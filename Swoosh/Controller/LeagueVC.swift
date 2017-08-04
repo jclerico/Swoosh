@@ -46,6 +46,15 @@ class LeagueVC: UIViewController {
         nextBtn.isEnabled = true
     }
     
-    
-    
+    //USE TO PASS DATA TO ANOTHER VC.
+    //Same code if you had multiple segues from one vc to many others.
+    //IMPORTANT: prepare for segue will ALWAYS be called BEFORE viewDidLoad in the DESITNATION VIEWCONTROLLER! .Therefore you can always guarantee data will be available in viewDidLoad if you initialized it.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Using if let sequence - It will try and run an operation (here assign the  destination ViewController into skillVC constant). If it succeeds, it will execute inside the code block. If fails, the if statement fails.
+        //If succeeds, it grabs the code from the destination VC and stores it in memory in the skillVC constant.
+        if let skillVC = segue.destination as? SkillVC {
+            //Passing the player from LeagueVC to SkilLVC
+            skillVC.player = player
+        }
+    }
 }
