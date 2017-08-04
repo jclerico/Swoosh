@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fmG-JP-8kV"/>
                         <viewControllerLayoutGuide type="bottom" id="GJO-UI-kuY"/>
@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="620" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="mVd-dM-eEc">
             <objects>
-                <viewController id="ow3-G8-doX" sceneMemberID="viewController">
+                <viewController id="ow3-G8-doX" customClass="LeagueVC" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0sx-Vy-kME"/>
                         <viewControllerLayoutGuide type="bottom" id="QAF-df-P1a"/>
@@ -153,9 +153,12 @@
                                     <constraint firstAttribute="height" constant="50" id="p41-JG-CAh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="ow3-G8-doX" eventType="touchUpInside" id="Esk-hf-9FY"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iDZ-RV-9ac">
                                 <rect key="frame" x="16" y="40" width="343" height="70"/>
@@ -205,16 +208,19 @@
                             <constraint firstItem="gDF-lb-cI7" firstAttribute="trailing" secondItem="W2K-mz-S4H" secondAttribute="trailingMargin" id="zle-iz-vDf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="X16-ae-ISm" kind="show" identifier="SkillVCSegue" id="h51-sL-6uc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIf-d8-QBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hVS-6E-rJZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1432.8" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="qrj-ql-mv5">
             <objects>
-                <viewController id="X16-ae-ISm" sceneMemberID="viewController">
+                <viewController id="X16-ae-ISm" customClass="SkillVC" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NgX-MO-xwZ"/>
                         <viewControllerLayoutGuide type="bottom" id="MxX-Zb-vWK"/>
